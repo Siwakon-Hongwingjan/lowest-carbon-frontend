@@ -206,9 +206,6 @@ function HeroSection({
                 ไปหน้า Tracker
               </Button>
             </div>
-            <p className="text-xs text-muted-foreground">
-              หลังจากเชื่อมต่อ เราจะเก็บ token ใน <code>lc_token</code> และโปรไฟล์ใน <code>lc_user</code> บนอุปกรณ์นี้
-            </p>
           </div>
         </div>
       </div>

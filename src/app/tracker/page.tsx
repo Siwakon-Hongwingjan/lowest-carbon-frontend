@@ -291,17 +291,6 @@ export default function TrackerPage() {
             <div className="flex items-center gap-2">
               <Button
                 type="button"
-                variant="outline"
-                size="sm"
-                className="rounded-lg border-[#00B900]/60 text-[#00B900]"
-                onClick={handleCalcCo2}
-                disabled={aiLoading || loadingSummary || loadingActivities}
-              >
-                <Sparkles className="mr-1.5 size-4" />
-                คำนวณด้วย AI
-              </Button>
-              <Button
-                type="button"
                 variant="ghost"
                 size="sm"
                 className="ml-auto text-xs text-muted-foreground hover:bg-[#D9FEDD]"
@@ -529,7 +518,20 @@ export default function TrackerPage() {
 
         <Card className="rounded-xl border border-[#00C300]/40 bg-white shadow-sm">
           <CardHeader className="space-y-1 pb-3">
-            <CardTitle className="text-lg text-gray-900">กิจกรรมที่บันทึกวันนี้</CardTitle>
+            <div className="flex items-center justify-between gap-2">
+              <CardTitle className="text-lg text-gray-900">กิจกรรมที่บันทึกวันนี้</CardTitle>
+              <Button
+                type="button"
+                variant="outline"
+                size="sm"
+                className="rounded-lg border-[#00B900]/60 text-[#00B900]"
+                onClick={handleCalcCo2}
+                disabled={aiLoading || loadingActivities}
+              >
+                <Sparkles className="mr-1.5 size-4" />
+                คำนวณด้วย AI
+              </Button>
+            </div>
           </CardHeader>
           <CardContent className="space-y-3">
             {loadingActivities ? (
